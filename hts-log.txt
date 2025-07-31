@@ -1,0 +1,18 @@
+HTTrack3.49-2+htsswf+htsjava launched on Wed, 30 Jul 2025 22:00:23 at https://www.jitware.be/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qwC2%Ps2u1%s%uN0%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://www.jitware.be/ -O1 "D:\Web Copier\My project" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/www.instagram.com/jitware (from https://www.jitware.be/)
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/ai/ai-oplossingen/includes/favicon.png (from https://www.jitware.be/ai/ai-oplossingen/)
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/tools/includes/favicon.png (from https://www.jitware.be/tools/)
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/seo/includes/favicon.png (from https://www.jitware.be/seo/positie-91-naar-positie-2)
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/cases/includes/favicon.png (from https://www.jitware.be/cases/website-seo-de-doncker)
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/ai/prompts/includes/favicon.png (from https://www.jitware.be/ai/prompts/prompt-library)
+22:00:38	Error: 	"Not Found" (404) at link https://www.jitware.be/financien/includes/favicon.png (from https://www.jitware.be/financien/)
+
+HTTrack Website Copier/3.49-2 mirror complete in 15 seconds : 38 links scanned, 30 files written (2613341 bytes overall) [2045157 bytes received at 136343 bytes/sec], 770699 bytes transferred using HTTP compression in 17 files, ratio 24%, 6.1 requests per connection
+(7 errors, 0 warnings, 0 messages)
