@@ -1,0 +1,559 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<!-- Mirrored from www.jitware.be/ai/ai-oplossingen/generative-ai-oplossingen by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Generative AI Oplossingen</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#6366f1',
+                        secondary: '#8b5cf6',
+                        accent: '#ec4899',
+                        dark: '#1e293b',
+                        light: '#f8fafc'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f9ff 0%, #e0f2fe 100%);
+        }
+        
+        .card-hover {
+            transition: all 0.3s ease;
+            transform: translateY(0);
+        }
+        
+        .card-hover:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .ai-icon {
+            transition: all 0.3s ease;
+        }
+        
+        .card-hover:hover .ai-icon {
+            transform: scale(1.1);
+        }
+        
+        .animate-float {
+            animation: float 3s ease-in-out infinite;
+        }
+        
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
+        }
+        
+        .progress-bar {
+            height: 4px;
+            background: linear-gradient(90deg, #6366f1, #8b5cf6);
+            width: 0%;
+            transition: width 0.5s ease;
+        }
+    </style>
+<link rel="icon" href="includes/favicon.html" type="image/png">
+<!-- GA script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7M5J12J0X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E7M5J12J0X');
+</script>
+
+<!-- Mouseflow -->
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "../../../cdn.mouseflow.com/projects/75bea4c3-cd8d-4001-953f-3b3c39462f1f.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Header -->
+    <header class="bg-white shadow-lg">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="bg-gradient-to-r from-primary to-secondary w-12 h-12 rounded-lg flex items-center justify-center mr-3">
+                        <i class="fas fa-brain text-white text-2xl"></i>
+                    </div>
+                    <h1 class="text-3xl font-bold gradient-text">Generative AI Oplossingen</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <div class="hidden md:block bg-indigo-100 px-4 py-2 rounded-full">
+                        <span class="text-indigo-700 font-medium">20 Creatieve Oplossingen</span>
+                    </div>
+                    <a href="../../contact.html" class="bg-gradient-to-r from-primary to-secondary text-white px-6 py-2 rounded-full font-medium hover:opacity-90 transition-all">
+                        Start Nu
+    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 md:py-20">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-4xl md:text-5xl font-bold text-gray-800 mb-6">
+                    Automatiseer Creatieve Output met <span class="gradient-text">Generative AI</span>
+                </h2>
+                <p class="text-xl text-gray-600 mb-10">
+                    Ontdek 20 krachtige toepassingen van generative AI om je bedrijf te transformeren en tijd te besparen bij creatieve taken.
+                </p>
+                <div class="flex flex-wrap justify-center gap-4">
+                    <span class="bg-indigo-100 text-indigo-800 px-4 py-2 rounded-full">E-commerce</span>
+                    <span class="bg-purple-100 text-purple-800 px-4 py-2 rounded-full">Marketing</span>
+                    <span class="bg-pink-100 text-pink-800 px-4 py-2 rounded-full">Content Creatie</span>
+                    <span class="bg-blue-100 text-blue-800 px-4 py-2 rounded-full">Branding</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Progress Bar -->
+    <div class="container mx-auto px-4 mb-12">
+        <div class="bg-white rounded-full h-2 shadow-inner">
+            <div class="progress-bar rounded-full" id="progressBar"></div>
+        </div>
+    </div>
+
+    <!-- Solutions Grid -->
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-4">20 Generative AI Oplossingen</h2>
+            <p class="text-gray-600 text-center mb-12 max-w-2xl mx-auto">
+                Van productfoto's tot e-books - ontdek hoe AI je creatieve processen kan versnellen en verbeteren.
+            </p>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Solution 1 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-camera ai-icon text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Productfoto's genereren</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Creëer professionele productfoto's voor e-commerce zonder fotoshoots.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">E-commerce</span>
+                        <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">AI Imaging</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 2 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-hashtag ai-icon text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Social Media Visuals</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Maak aantrekkelijke visuals voor social media met Midjourney of Canva.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-purple-600 font-medium">Marketing</span>
+                        <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 3 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-video ai-icon text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">AI-video's maken</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer korte video's voor TikTok of Reels in seconden.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-pink-600 font-medium">Video</span>
+                        <span class="bg-pink-50 text-pink-700 text-xs px-2 py-1 rounded">Video AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 4 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-music ai-icon text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Jingles & Muziek</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer jingles en achtergrondmuziek met Suno AI.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600 font-medium">Audio</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">Music AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 5 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-video ai-icon text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Productvideo met Voice-over</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Creëer productvideo's met voice-over op basis van brochures.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-green-600 font-medium">Marketing</span>
+                        <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">Video AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 6 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-image ai-icon text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">YouTube Thumbnails</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer aantrekkelijke thumbnails voor YouTube-video's.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-yellow-600 font-medium">Video</span>
+                        <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 7 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-red-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-blog ai-icon text-red-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Blogartikelen genereren</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Automatiseer blogcreatie met SEO-geoptimaliseerde prompts.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-red-600 font-medium">Content</span>
+                        <span class="bg-red-50 text-red-700 text-xs px-2 py-1 rounded">Text AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 8 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-teal-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-map ai-icon text-teal-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Posterdesigns</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Ontwerp posters voor lokale evenementen met AI.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-teal-600 font-medium">Design</span>
+                        <span class="bg-teal-50 text-teal-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 9 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-orange-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-user ai-icon text-orange-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Testimonial-video's</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Maak testimonial-video's met AI-avatars.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-orange-600 font-medium">Marketing</span>
+                        <span class="bg-orange-50 text-orange-700 text-xs px-2 py-1 rounded">Video AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 10 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-cyan-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-book ai-icon text-cyan-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">E-books automatisch</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer e-books zoals '10 tips voor X' automatisch.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-cyan-600 font-medium">Content</span>
+                        <span class="bg-cyan-50 text-cyan-700 text-xs px-2 py-1 rounded">Text AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 11 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-lime-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-utensils ai-icon text-lime-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Menukaarten ontwerpen</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Ontwerp professionele menukaarten voor horeca met AI.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-lime-600 font-medium">Horeca</span>
+                        <span class="bg-lime-50 text-lime-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 12 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-emerald-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-bullseye ai-icon text-emerald-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">AI branding-concepten</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer branding-concepten per doelgroep.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-emerald-600 font-medium">Branding</span>
+                        <span class="bg-emerald-50 text-emerald-700 text-xs px-2 py-1 rounded">Strategy AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 13 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-amber-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-list ai-icon text-amber-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Productbeschrijvingen</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer productbeschrijvingen en bullet points voor Amazon.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-amber-600 font-medium">E-commerce</span>
+                        <span class="bg-amber-50 text-amber-700 text-xs px-2 py-1 rounded">Text AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 14 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-rose-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-laugh-wink ai-icon text-rose-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Meme-generator</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Automatiseer meme-creatie voor sociale posts.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-rose-600 font-medium">Social Media</span>
+                        <span class="bg-rose-50 text-rose-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 15 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fab fa-linkedin ai-icon text-indigo-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">LinkedIn-campagnes</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Automatiseer LinkedIn-campagnecontent.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-indigo-600 font-medium">B2B</span>
+                        <span class="bg-indigo-50 text-indigo-700 text-xs px-2 py-1 rounded">Text AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 16 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file ai-icon text-purple-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">YouTube scripts</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Laat YouTube-scripts automatisch schrijven.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-purple-600 font-medium">Video</span>
+                        <span class="bg-purple-50 text-purple-700 text-xs px-2 py-1 rounded">Text AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 17 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-lightbulb ai-icon text-pink-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Visuele brainstorm</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer ideeën en moodboards voor designprojecten.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-pink-600 font-medium">Creativity</span>
+                        <span class="bg-pink-50 text-pink-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 18 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-alt ai-icon text-blue-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">CV & motivatiebrief</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer CV-templates en motivatiebrieven met AI.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-blue-600 font-medium">HR</span>
+                        <span class="bg-blue-50 text-blue-700 text-xs px-2 py-1 rounded">Text AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 19 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-chart-bar ai-icon text-green-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Infographics</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Genereer infographics op basis van data.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-green-600 font-medium">Data Viz</span>
+                        <span class="bg-green-50 text-green-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+                
+                <!-- Solution 20 -->
+                <div class="bg-white rounded-2xl shadow-lg p-6 card-hover">
+                    <div class="flex items-center mb-4">
+                        <div class="bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-palette ai-icon text-yellow-600 text-xl"></i>
+                        </div>
+                        <h3 class="font-bold text-lg text-gray-800">Moodboards & logo's</h3>
+                    </div>
+                    <p class="text-gray-600 mb-4">Creëer moodboards en logo-ideeën voor brandingprojecten.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="text-sm text-yellow-600 font-medium">Branding</span>
+                        <span class="bg-yellow-50 text-yellow-700 text-xs px-2 py-1 rounded">Design AI</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-secondary">
+        <div class="container mx-auto px-4 text-center">
+            <div class="max-w-3xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Begin Vandaag Met Generative AI</h2>
+                <p class="text-indigo-100 text-xl mb-10">
+                    Transformeer je creatieve processen en bespaar uren werk met AI-oplossingen.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center gap-4">
+                    <a href="../../contact.html"  class="bg-white text-primary font-bold px-8 py-4 rounded-full hover:bg-indigo-50 transition-all transform hover:-translate-y-1">
+                        <i class="fas fa-rocket mr-2"></i>Start Je AI Journey
+    </a>
+                    <a href="../../contact.html"  class="bg-transparent border-2 border-white text-white font-bold px-8 py-4 rounded-full hover:bg-white/10 transition-all">
+                        <i class="fas fa-book-open mr-2"></i>Bekijk Casestudies
+    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-gradient-to-r from-primary to-secondary w-10 h-10 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-brain text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">AI Solutions</h3>
+                    </div>
+                    <p class="text-gray-400">
+                        Transformeer je bedrijf met krachtige generative AI-oplossingen.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Oplossingen</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">E-commerce AI</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Marketing Tools</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Content Creatie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Branding AI</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Documentatie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Casestudies</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white transition">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                    <ul class="space-y-2">
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">info@aisolutions.nl</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">+31 20 123 4567</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-map-marker-alt mr-2 text-gray-400"></i>
+                            <span class="text-gray-400">Amsterdam, Nederland</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-10 pt-6 text-center text-gray-500">
+                <p>&copy; 2023 Generative AI Solutions. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Progress bar animation
+        document.addEventListener('DOMContentLoaded', function() {
+            const progressBar = document.getElementById('progressBar');
+            
+            // Animate progress bar on scroll
+            window.addEventListener('scroll', function() {
+                const scrollTop = window.scrollY;
+                const docHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                progressBar.style.width = scrollPercent + '%';
+            });
+            
+            // Initial progress bar width
+            setTimeout(() => {
+                progressBar.style.width = '15%';
+            }, 500);
+        });
+    </script>
+</body>
+
+<!-- Mirrored from www.jitware.be/ai/ai-oplossingen/generative-ai-oplossingen by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+</html>

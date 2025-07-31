@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<!-- Mirrored from www.jitware.be/ai/ai-oplossingen/ai-automation-oplossingen by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🤖 AI Automation - 20 Oplossingen</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#10B981',
+                        accent: '#F59E0B',
+                        dark: '#1F2937',
+                        light: '#F9FAFB'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4f8 0%, #e6f7ff 100%);
+        }
+        
+        .solution-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .number-badge {
+            min-width: 32px;
+            height: 32px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+        
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #10B981);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        
+        .ai-icon {
+            animation: pulse 2s infinite;
+        }
+        
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        
+        .progress-bar {
+            height: 6px;
+            background: linear-gradient(90deg, #4F46E5, #10B981);
+        }
+        
+        .feature-highlight {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .feature-highlight::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255,255,255,0.4), transparent);
+            transition: 0.5s;
+        }
+        
+        .feature-highlight:hover::before {
+            left: 100%;
+        }
+    </style>
+<link rel="icon" href="includes/favicon.html" type="image/png">
+<!-- GA script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7M5J12J0X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E7M5J12J0X');
+</script>
+
+<!-- Mouseflow -->
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "../../../cdn.mouseflow.com/projects/75bea4c3-cd8d-4001-953f-3b3c39462f1f.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+
+</head>
+<body class="min-h-screen">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="flex items-center mb-4 md:mb-0">
+                    <div class="bg-primary text-white p-3 rounded-xl mr-4 ai-icon">
+                        <i class="fas fa-robot text-2xl"></i>
+                    </div>
+                    <div>
+                        <h1 class="text-2xl md:text-3xl font-bold gradient-text">AI Automation Oplossingen</h1>
+                        <p class="text-gray-600">20 krachtige manieren om repetitieve taken te automatiseren</p>
+                    </div>
+                </div>
+                <div class="flex items-center space-x-4">
+                    <a href="../../contact.html" class="bg-primary hover:bg-indigo-700 text-white px-4 py-2 rounded-lg transition flex items-center">
+                        <i class="fas fa-download mr-2"></i> Contact
+    </a>
+                    <a href="callto:+32472854946" class="bg-secondary hover:bg-green-700 text-white px-4 py-2 rounded-lg transition flex items-center">
+                        <i class="fas fa-plus mr-2"></i> Bel ons: 04 72 85 49 46
+    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Progress Indicator -->
+    <div class="container mx-auto px-4 py-2">
+        <div class="bg-white rounded-full p-1 shadow-sm">
+            <div class="progress-bar rounded-full w-1/4"></div>
+        </div>
+        <div class="flex justify-between text-xs text-gray-500 mt-1">
+            <span>0%</span>
+            <span>25%</span>
+            <span>50%</span>
+            <span>75%</span>
+            <span>100%</span>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main class="container mx-auto px-4 py-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Solution 1 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">1</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Inkomende leads automatisch verwerken</h3>
+                        <p class="text-gray-600 text-sm">Via e-mailparser + CRM integratie</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">CRM</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 2 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">2</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Facturen automatisch klasseren</h3>
+                        <p class="text-gray-600 text-sm">En verwerken via AI-documentherkenning</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">Financiën</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded ml-2">OCR</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 3 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">3</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Nieuwe klanten automatisch onboarden</h3>
+                        <p class="text-gray-600 text-sm">Via AI-chat + gepersonaliseerde video</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">Onboarding</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded ml-2">Video</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 4 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">4</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Boekingsbevestigingen automatisch genereren</h3>
+                        <p class="text-gray-600 text-sm">En verzenden via e-mail</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Boekingen</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded ml-2">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 5 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">5</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Klantgesprekken automatisch samenvatten</h3>
+                        <p class="text-gray-600 text-sm">Notulen genereren uit gesprekken</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Notulen</span>
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded ml-2">AI</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 6 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">6</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Contentkalender automatisch genereren</h3>
+                        <p class="text-gray-600 text-sm">Op basis van klantthema's en trends</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Marketing</span>
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded ml-2">Content</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 7 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">7</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">AI-rapporten genereren voor SEO</h3>
+                        <p class="text-gray-600 text-sm">En web analytics rapportage</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded">SEO</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded ml-2">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 8 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">8</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">FAQ's automatisch beantwoorden</h3>
+                        <p class="text-gray-600 text-sm">Via AI-agent zonder menselijke tussenkomst</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Support</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded ml-2">Chatbot</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 9 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">9</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Herinneringsmails automatisch verzenden</h3>
+                        <p class="text-gray-600 text-sm">Voor afspraken en openstaande facturen</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded">Communicatie</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 10 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">10</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Reviews automatisch opvolgen</h3>
+                        <p class="text-gray-600 text-sm">En gepersonaliseerde AI-reacties plaatsen</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Reputatie</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded ml-2">Feedback</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 11 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">11</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Leads scoren en segmenteren</h3>
+                        <p class="text-gray-600 text-sm">Op basis van AI-analyse van klantgedrag</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Sales</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded ml-2">Marketing</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 12 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">12</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Marketingcampagnes analyseren</h3>
+                        <p class="text-gray-600 text-sm">AI-rapporten voor prestatie-optimalisatie</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded">Marketing</span>
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded ml-2">Analytics</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 13 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">13</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Contractvoorstellen automatisch genereren</h3>
+                        <p class="text-gray-600 text-sm">Op basis van klantbehoeften en historiek</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded">Juridisch</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded ml-2">Documenten</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 14 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">14</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Interne updates samenvatten</h3>
+                        <p class="text-gray-600 text-sm">Dagelijkse samenvatting uit Slack conversaties</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">Intern</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded ml-2">Communicatie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 15 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">15</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Onboarding mails personaliseren</h3>
+                        <p class="text-gray-600 text-sm">Aanpassen per klantprofiel en behoeften</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Marketing</span>
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded ml-2">Personalisatie</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 16 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">16</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Klachten automatisch categoriseren</h3>
+                        <p class="text-gray-600 text-sm">En oplossen via AI-workflows</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded">Support</span>
+                            <span class="bg-pink-100 text-pink-800 text-xs px-2 py-1 rounded ml-2">Klantenservice</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 17 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">17</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Prijsvoorstellen automatisch maken</h3>
+                        <p class="text-gray-600 text-sm">Voor nieuwe aanvragen op basis van historiek</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded">Sales</span>
+                            <span class="bg-purple-100 text-purple-800 text-xs px-2 py-1 rounded ml-2">Financiën</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 18 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">18</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Urenregistratie automatisch samenvatten</h3>
+                        <p class="text-gray-600 text-sm">In weekrapporten voor management</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded">HR</span>
+                            <span class="bg-teal-100 text-teal-800 text-xs px-2 py-1 rounded ml-2">Productiviteit</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 19 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">19</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">Salespipeline automatisch updaten</h3>
+                        <p class="text-gray-600 text-sm">Via AI-analyse + CRM integratie</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-indigo-100 text-indigo-800 text-xs px-2 py-1 rounded">Sales</span>
+                            <span class="bg-green-100 text-green-800 text-xs px-2 py-1 rounded ml-2">CRM</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Solution 20 -->
+            <div class="solution-card bg-white rounded-xl p-6 border border-gray-100 feature-highlight">
+                <div class="flex items-start">
+                    <div class="number-badge bg-primary text-white font-bold mr-4">20</div>
+                    <div>
+                        <h3 class="font-bold text-lg mb-2">E-mailcontent categoriseren</h3>
+                        <p class="text-gray-600 text-sm">Voor automatische opvolging en actie</p>
+                        <div class="mt-4 flex items-center">
+                            <span class="bg-yellow-100 text-yellow-800 text-xs px-2 py-1 rounded">Communicatie</span>
+                            <span class="bg-red-100 text-red-800 text-xs px-2 py-1 rounded ml-2">E-mail</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Stats Section -->
+        <div class="mt-12 bg-white rounded-xl shadow-sm p-6">
+            <h2 class="text-xl font-bold mb-6 text-center">Automatisatie Impact Overzicht</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-4">
+                <div class="bg-blue-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-primary">85%</div>
+                    <div class="text-gray-600 mt-2">Tijd besparing</div>
+                </div>
+                <div class="bg-green-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-secondary">70%</div>
+                    <div class="text-gray-600 mt-2">Foutenreductie</div>
+                </div>
+                <div class="bg-yellow-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-accent">90%</div>
+                    <div class="text-gray-600 mt-2">Consistentie</div>
+                </div>
+                <div class="bg-purple-50 rounded-lg p-4 text-center">
+                    <div class="text-3xl font-bold text-purple-600">20</div>
+                    <div class="text-gray-600 mt-2">Oplossingen</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- CTA Section -->
+        <div class="mt-12 bg-gradient-to-r from-primary to-secondary rounded-xl p-8 text-center text-white">
+            <h2 class="text-2xl font-bold mb-4">Begin met AI Automatisatie vandaag nog!</h2>
+            <p class="mb-6 max-w-2xl mx-auto">Transformeer je bedrijf met krachtige AI-oplossingen die repetitieve taken automatiseren en je teamproductiviteit verhogen.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <a href="../../contact.html" class="bg-white text-primary hover:bg-gray-100 font-bold py-3 px-6 rounded-lg transition flex items-center justify-center">
+                    <i class="fas fa-rocket mr-2"></i> Start Automatisatie
+    </a>
+                <a href="../../contact.html" class="bg-transparent border-2 border-white hover:bg-white/10 font-bold py-3 px-6 rounded-lg transition flex items-center justify-center">
+                    <i class="fas fa-calendar-alt mr-2"></i> Plan Demo
+    </a>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-8 mt-12">
+        <div class="container mx-auto px-4">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <div class="mb-4 md:mb-0">
+                    <div class="flex items-center">
+                        <div class="bg-primary text-white p-2 rounded-lg mr-3">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <span class="text-xl font-bold">AI Automation Solutions</span>
+                    </div>
+                    <p class="text-gray-400 mt-2 text-sm">Transformeer je bedrijf met AI-automatisatie</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-6 pt-6 text-center text-gray-500 text-sm">
+                <p>© 2023 AI Automation Solutions. Alle rechten voorbehouden.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Mirrored from www.jitware.be/ai/ai-oplossingen/ai-automation-oplossingen by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+</html>

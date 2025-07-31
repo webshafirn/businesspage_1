@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jitware.be/ai/ai-oplossingen/ai-prompt-engineering by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Engineering Oplossingen</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#4F46E5',
+                        secondary: '#818CF8',
+                        accent: '#F472B6',
+                        dark: '#1E293B',
+                        light: '#F8FAFC'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&amp;display=swap');
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #f0f4ff 0%, #e6f0ff 100%);
+        }
+        .solution-card {
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
+        }
+        .solution-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+        }
+        .solution-icon {
+            transition: all 0.3s ease;
+        }
+        .solution-card:hover .solution-icon {
+            transform: scale(1.1);
+        }
+        .gradient-text {
+            background: linear-gradient(90deg, #4F46E5, #818CF8, #F472B6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.7; }
+        }
+    </style>
+<link rel="icon" href="includes/favicon.html" type="image/png">
+<!-- GA script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7M5J12J0X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E7M5J12J0X');
+</script>
+
+<!-- Mouseflow -->
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "../../../cdn.mouseflow.com/projects/75bea4c3-cd8d-4001-953f-3b3c39462f1f.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+
+</head>
+<body class="min-h-screen bg-gradient-to-br from-blue-50 to-indigo-100">
+    <!-- Header -->
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-6 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center mb-4 md:mb-0">
+                <div class="bg-primary w-12 h-12 rounded-lg flex items-center justify-center mr-3">
+                    <i class="fas fa-robot text-white text-2xl"></i>
+                </div>
+                <div>
+                    <h1 class="text-2xl md:text-3xl font-bold text-dark">Prompt Engineering Oplossingen</h1>
+                    <p class="text-gray-600">20 AI-oplossingen voor uw bedrijf</p>
+                </div>
+            </div>
+            <div class="flex space-x-3">
+                <button class="bg-primary hover:bg-indigo-700 text-white px-5 py-2 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-download mr-2"></i> Gids Downloaden
+                </button>
+                <button class="border border-primary text-primary hover:bg-primary hover:text-white px-5 py-2 rounded-lg transition duration-300 flex items-center">
+                    <i class="fas fa-star mr-2"></i> Oplossingen Opslaan
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="py-12 bg-gradient-to-r from-primary to-indigo-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-bold mb-4">Transformeer Uw Bedrijf met Strategische Prompt Engineering</h2>
+            <p class="text-xl max-w-3xl mx-auto mb-8">Gebruik onze 20 AI-oplossingen om taken te automatiseren, de klantbeleving te verbeteren en productiviteit te verhogen</p>
+            <div class="flex flex-wrap justify-center gap-4">
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 flex items-center">
+                    <i class="fas fa-bolt text-yellow-300 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold">20 Oplossingen</p>
+                        <p class="text-sm">Klaar om te implementeren</p>
+                    </div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 flex items-center">
+                    <i class="fas fa-rocket text-green-300 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold">3x Efficiëntie</p>
+                        <p class="text-sm">Productiviteit verhogen</p>
+                    </div>
+                </div>
+                <div class="bg-white/20 backdrop-blur-sm rounded-xl p-4 flex items-center">
+                    <i class="fas fa-sync-alt text-blue-300 text-2xl mr-3"></i>
+                    <div>
+                        <p class="font-semibold">Continue</p>
+                        <p class="text-sm">AI optimalisatie</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Grid -->
+    <section class="py-16">
+        <div class="container mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-dark mb-3">Onze Prompt Engineering Oplossingen</h2>
+                <p class="text-gray-600 max-w-2xl mx-auto">Strategische prompts ontworpen om de AI-prestaties te maximaliseren in verschillende bedrijfsfuncties</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+                <!-- Solution 1 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-comments text-primary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Klantendienst-chatbots</h3>
+                            <p class="text-gray-600 text-sm">Op maat laten antwoorden</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Maak gepersonaliseerde chatbot-antwoorden die overeenkomen met uw merkstem en klantproblemen efficiënt oplossen.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-blue-50 text-primary text-xs px-2 py-1 rounded">Klantenservice</span>
+                        <button class="text-primary hover:text-indigo-700 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 2 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-envelope-open-text text-secondary text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Verkoop-e-mails</h3>
+                            <p class="text-gray-600 text-sm">Prompt templates maken</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Genereer overtuigende verkoopmails met hoge conversierates, afgestemd op verschillende klantsegmenten.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-purple-50 text-secondary text-xs px-2 py-1 rounded">Verkoop</span>
+                        <button class="text-secondary hover:text-purple-700 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 3 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-alt text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Interne SOP’s</h3>
+                            <p class="text-gray-600 text-sm">Automatisch uitschrijven</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Genereer automatisch standaard werkprocedures voor consistente workflow-documentatie.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded">Operaties</span>
+                        <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 4 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-user-tie text-accent text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">HR-interviews</h3>
+                            <p class="text-gray-600 text-sm">Samenvatten en scoren</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Analyseer interviewtranscripties om belangrijke inzichten te identificeren en kandidaten objectief te scoren.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-pink-50 text-accent text-xs px-2 py-1 rounded">HR</span>
+                        <button class="text-accent hover:text-pink-700 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 5 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-search text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">SEO-teksten</h3>
+                            <p class="text-gray-600 text-sm">Genereren met prompts</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Maak SEO-geoptimaliseerde content die hoger scoort in zoekmachines en organisch verkeer genereert.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-green-50 text-green-600 text-xs px-2 py-1 rounded">Marketing</span>
+                        <button class="text-green-600 hover:text-green-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 6 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-red-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-csv text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">CV-evaluatie</h3>
+                            <p class="text-gray-600 text-sm">Hiring-advies geven</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Evalueer cv's en geef aanbevelingen voor werving op basis van functie-eisen en geschiktheid van kandidaten.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-red-50 text-red-600 text-xs px-2 py-1 rounded">Werving</span>
+                        <button class="text-red-600 hover:text-red-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 7 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-comment-dots text-yellow-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Klantrecensies</h3>
+                            <p class="text-gray-600 text-sm">Feedback genereren</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Analyseer klantbeoordelingen en genereer actiegerichte feedback om producten en services te verbeteren.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-yellow-50 text-yellow-600 text-xs px-2 py-1 rounded">Klanttevredenheid</span>
+                        <button class="text-yellow-600 hover:text-yellow-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 8 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-ad text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Google Ads</h3>
+                            <p class="text-gray-600 text-sm">Slimme headlines schrijven</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Creëer overtuigende Google Ads-koppen die de klikfrequentie verhogen en conversies stimuleren.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded">Adverteren</span>
+                        <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 9 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-microphone-alt text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Scripts herschrijven</h3>
+                            <p class="text-gray-600 text-sm">Op tone-of-voice</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Pas scripts aan om te voldoen aan de unieke toon van uw merk voor consistente boodschappen.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-purple-50 text-purple-600 text-xs px-2 py-1 rounded">Content</span>
+                        <button class="text-purple-600 hover:text-purple-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 10 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-calendar-alt text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Agenda-analyse</h3>
+                            <p class="text-gray-600 text-sm">Taakoverzicht genereren</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Analyseer agenda's om taaksamenvattingen te genereren en planning te optimaliseren voor productiviteit.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded">Productiviteit</span>
+                        <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 11 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-gavel text-pink-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Juridische checklists</h3>
+                            <p class="text-gray-600 text-sm">Opstellen met prompts</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Maak uitgebreide juridische checklists om naleving te waarborgen en risico's te verminderen.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded">Juridisch</span>
+                        <button class="text-pink-600 hover:text-pink-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 12 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-contract text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Contracten</h3>
+                            <p class="text-gray-600 text-sm">Samenvatten en structureren</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Vat complexe contracten samen en structureer belangrijke voorwaarden voor eenvoudiger begrip.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-green-50 text-green-600 text-xs px-2 py-1 rounded">Juridisch</span>
+                        <button class="text-green-600 hover:text-green-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 13 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-red-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-presentation text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Presentatiescripts</h3>
+                            <p class="text-gray-600 text-sm">Genereren op basis van input</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Maak overtuigende presentatiescripts vanuit kernpunten voor impactvolle presentaties.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-red-50 text-red-600 text-xs px-2 py-1 rounded">Communicatie</span>
+                        <button class="text-red-600 hover:text-red-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 14 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-yellow-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-laptop-code text-yellow-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">E-learning content</h3>
+                            <p class="text-gray-600 text-sm">Ontwikkeling met prompting</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Ontwikkel boeiende e-learning content die kennisbehoud en betrokkenheid bevordert.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-yellow-50 text-yellow-600 text-xs px-2 py-1 rounded">Onderwijs</span>
+                        <button class="text-yellow-600 hover:text-yellow-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 15 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-blue-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-hashtag text-blue-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Social media posts</h3>
+                            <p class="text-gray-600 text-sm">Prompt sets maken</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Genereer boeiende social media content afgestemd op verschillende platforms en doelgroepen.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-blue-50 text-blue-600 text-xs px-2 py-1 rounded">Marketing</span>
+                        <button class="text-blue-600 hover:text-blue-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 16 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-purple-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-box-open text-purple-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Productbeschrijvingen</h3>
+                            <p class="text-gray-600 text-sm">Herschrijven op doelgroep</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Maak overtuigende productbeschrijvingen die zijn afgestemd op specifieke klantsegmenten.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-purple-50 text-purple-600 text-xs px-2 py-1 rounded">E-commerce</span>
+                        <button class="text-purple-600 hover:text-purple-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 17 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-indigo-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-envelope text-indigo-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Koude e-mails</h3>
+                            <p class="text-gray-600 text-sm">Herschrijven naar warmer contact</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Transformeer koude outreach e-mails naar warme, gepersonaliseerde berichten die betrokkenheid stimuleren.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-indigo-50 text-indigo-600 text-xs px-2 py-1 rounded">Verkoop</span>
+                        <button class="text-indigo-600 hover:text-indigo-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 18 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-pink-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-question-circle text-pink-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">AI interviewvragen</h3>
+                            <p class="text-gray-600 text-sm">Op basis van rol en cultuur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Genereer interviewvragen afgestemd op specifieke rollen en bedrijfscultuur.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-pink-50 text-pink-600 text-xs px-2 py-1 rounded">HR</span>
+                        <button class="text-pink-600 hover:text-pink-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 19 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-green-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-file-invoice-dollar text-green-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Offertes</h3>
+                            <p class="text-gray-600 text-sm">Op basis van inputformulier</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Maak automatisch professionele offertes op basis van klantvereisten en specificaties.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-green-50 text-green-600 text-xs px-2 py-1 rounded">Verkoop</span>
+                        <button class="text-green-600 hover:text-green-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+
+                <!-- Solution 20 -->
+                <div class="solution-card bg-white rounded-xl p-6 border border-gray-100">
+                    <div class="flex items-start mb-4">
+                        <div class="solution-icon bg-red-100 p-3 rounded-lg mr-4">
+                            <i class="fas fa-book text-red-600 text-xl"></i>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-lg text-dark">Prompt libraries</h3>
+                            <p class="text-gray-600 text-sm">Als product voor nichemarkten</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 text-sm mb-4">Ontwikkel gespecialiseerde promptbibliotheken voor specifieke industrieën en niches om als producten te verkopen.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="bg-red-50 text-red-600 text-xs px-2 py-1 rounded">Productontwikkeling</span>
+                        <button class="text-red-600 hover:text-red-800 text-sm font-medium">Bekijk Sjabloon</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-16 bg-gradient-to-r from-primary to-indigo-700 text-white">
+        <div class="container mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold mb-4">Klaar om Uw Bedrijf te Transformeren?</h2>
+            <p class="text-xl max-w-2xl mx-auto mb-8">Implementeer deze prompt engineering oplossingen en ontsluit het volledige potentieel van AI voor uw organisatie.</p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+                <button class="bg-white text-primary hover:bg-gray-100 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-download mr-2"></i> Alle Sjablonen Ontvangen
+                </button>
+                <button class="bg-transparent border-2 border-white hover:bg-white/10 px-8 py-3 rounded-lg font-semibold text-lg transition duration-300 flex items-center justify-center">
+                    <i class="fas fa-calendar-alt mr-2"></i> Consultatie Inplannen
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white py-12">
+        <div class="container mx-auto px-4">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <div class="flex items-center mb-4">
+                        <div class="bg-primary w-10 h-10 rounded-lg flex items-center justify-center mr-3">
+                            <i class="fas fa-robot text-white"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">PromptEngine</h3>
+                    </div>
+                    <p class="text-gray-400 mb-4">Geavanceerde prompt engineering oplossingen voor moderne bedrijven.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Oplossingen</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Klantenservice</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Verkoopautomatisering</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">HR & Werving</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Content Creatie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Juridisch & Compliance</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Bronnen</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-gray-400 hover:text-white">Prompt Bibliotheek</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Documentatie</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Tutorials</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Blog</a></li>
+                        <li><a href="#" class="text-gray-400 hover:text-white">Community</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-semibold mb-4">Abonneren</h4>
+                    <p class="text-gray-400 mb-4">Ontvang de nieuwste prompt engineering tips en sjablonen.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Uw e-mail" class="px-4 py-2 rounded-l-lg w-full text-dark">
+                        <button class="bg-primary hover:bg-indigo-700 px-4 py-2 rounded-r-lg">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-500">
+                <p>&copy; 2023 PromptEngine. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+
+<!-- Mirrored from www.jitware.be/ai/ai-oplossingen/ai-prompt-engineering by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+</html>

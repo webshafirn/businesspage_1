@@ -1,0 +1,678 @@
+<!DOCTYPE html>
+
+<html lang="nl">
+
+
+<!-- Mirrored from www.jitware.be/contact by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Contacteer Ons | Jitware - Web, SEO & AI Experts</title>
+
+    <script src="https://cdn.tailwindcss.com/"></script>
+
+    <link rel="stylesheet" href="../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <script>
+
+        tailwind.config = {
+
+            theme: {
+
+                extend: {
+
+                    colors: {
+
+
+    primary: '#42a5f5',   // medium blue
+    secondary: '#1e88e5', // darker professional blue
+    dark: '#0f172a',      // slightly deeper than original dark
+    light: '#e3f2fd'      // soft light blue background
+
+
+
+                    },
+
+                    fontFamily: {
+
+                        sans: ['Inter', 'sans-serif'],
+
+                    },
+
+                }
+
+            }
+
+        }
+
+    </script>
+
+    <style>
+
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&amp;display=swap');
+
+        
+
+        body {
+
+            font-family: 'Inter', sans-serif;
+
+            background-color: #f8fafc;
+
+        }
+
+        
+
+        .gradient-bg {
+
+            background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+
+
+
+
+        }
+
+        
+
+        .form-input {
+
+            transition: all 0.3s ease;
+
+            box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+
+        }
+
+        
+
+        .form-input:focus {
+
+            box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.3);
+
+        }
+
+        
+
+        .submit-btn {
+
+            transition: all 0.3s ease;
+
+            background: linear-gradient(135deg, #42a5f5 0%, #1e88e5 100%);
+
+        }
+
+        
+
+        .submit-btn:hover {
+
+            transform: translateY(-2px);
+
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+        }
+
+        
+
+        .contact-card {
+
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+
+        }
+
+        
+
+        .floating {
+
+            animation: floating 6s ease-in-out infinite;
+
+        }
+
+        
+
+        @keyframes floating {
+
+            0% { transform: translateY(0px); }
+
+            50% { transform: translateY(-15px); }
+
+            100% { transform: translateY(0px); }
+
+        }
+
+    </style>
+
+</head>
+
+<body class="antialiased text-dark">
+
+    <!-- Header -->
+
+    <header class="gradient-bg text-white">
+
+        <div class="container mx-auto px-6 py-12">
+
+            <div class="flex justify-between items-center">
+
+                <div class="flex items-center space-x-2">
+
+
+                    <span class="text-xl font-bold">Jitware</span>
+
+                </div>
+<!--
+                <nav class="hidden md:flex space-x-8">
+
+                    <a href="#" class="hover:text-indigo-200 transition">Home</a>
+
+                    <a href="#" class="hover:text-indigo-200 transition">Diensten</a>
+
+                    <a href="#" class="hover:text-indigo-200 transition">Cases</a>
+
+                    <a href="#" class="hover:text-indigo-200 transition">Blog</a>
+
+                    <a href="#" class="font-semibold underline decoration-2">Contact</a>
+
+                </nav>
+
+                <button class="md:hidden text-white">
+
+                    <i class="fas fa-bars text-2xl"></i>
+
+                </button>
+-->
+            </div>
+
+            
+
+            <div class="mt-16 md:mt-24 text-center">
+
+                <h1 class="text-4xl md:text-5xl font-bold max-w-3xl mx-auto leading-tight">
+
+                    Laten we samenwerken aan jouw digitale succes
+
+                </h1>
+
+                <p class="mt-6 text-lg md:text-xl text-indigo-100 max-w-2xl mx-auto">
+
+                    Of je nu vragen hebt over webdevelopment, SEO of AI - ons team staat voor je klaar.
+
+                </p>
+
+            </div>
+
+            
+
+            <div class="mt-16 flex justify-center">
+
+                <div class="relative floating">
+
+                    <div class="absolute -inset-4 bg-primary rounded-xl opacity-20 blur"></div>
+
+                    <div class="relative bg-white text-primary px-6 py-3 rounded-lg font-semibold">
+                        <a href="#contact">
+                        <i class="fas fa-arrow-down mr-2"></i> Contactformulier
+</a>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </header>
+
+    
+
+    <!-- Main Content -->
+
+    <main class="container mx-auto px-6 py-16 md:py-24">
+
+        <div class="flex flex-col lg:flex-row gap-12">
+
+            <!-- Contact Form -->
+
+            <div class="lg:w-1/2">
+
+                <div id="contact" class="bg-white rounded-2xl contact-card p-8 md:p-10">
+
+                    <h2 class="text-3xl font-bold text-gray-800">Stuur ons een bericht</h2>
+
+                    <p class="mt-2 text-gray-600">
+
+                        Vul het formulier in en we nemen zo snel mogelijk contact met je op.
+
+                    </p>
+
+                    
+
+                    <form action="https://api.web3forms.com/submit" method="POST" class="mt-8 space-y-6">
+
+                        <input type="hidden" name="access_key" value="988965d3-e66c-4e18-8668-aadc7e44652e" />
+
+                        <input type="hidden" name="subject" value="Jitware contact" />
+
+                        <input type="hidden" name="from_name" value="Jitware" />
+
+                        <input type="hidden" name="redirect" value="https://jitware.be/bedankt.html" />
+
+                        
+
+                        <div>
+
+                            <label for="name" class="block text-sm font-medium text-gray-700 mb-1">Je naam</label>
+
+                            <div class="relative">
+
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+
+                                    <i class="fas fa-user text-gray-400"></i>
+
+                                </div>
+
+                                <input type="text" id="name" name="name" required 
+
+                                    class="form-input pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-primary" 
+
+                                    placeholder="Vul je naam in">
+
+                            </div>
+
+                        </div>
+
+                        
+
+                        <div>
+
+                            <label for="email" class="block text-sm font-medium text-gray-700 mb-1">Je e-mailadres</label>
+
+                            <div class="relative">
+
+                                <div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none">
+
+                                    <i class="fas fa-envelope text-gray-400"></i>
+
+                                </div>
+
+                                <input type="email" id="email" name="email" required 
+
+                                    class="form-input pl-10 w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-primary" 
+
+                                    placeholder="Vul je e-mailadres in">
+
+                            </div>
+
+                        </div>
+
+
+<div>
+  <label for="message" class="block text-sm font-medium text-gray-700 mb-1">Je bericht</label>
+  <div class="relative">
+
+    <textarea id="message" name="message" rows="4" required
+      class="form-input  w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-primary focus:ring-primary"
+      placeholder="Vul je bericht in"></textarea>
+  </div>
+</div>
+
+                        
+
+                        <div class="pt-2">
+
+                            <button type="submit" class="submit-btn w-full text-white font-semibold px-6 py-4 rounded-lg flex items-center justify-center space-x-2">
+
+                                <span>Verstuur bericht</span>
+
+                                <span class="text-xl">🚀</span>
+
+                            </button>
+
+                        </div>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+            
+
+            <!-- Contact Info -->
+
+            <div class="lg:w-1/2">
+
+                <div class="bg-gradient-to-br from-indigo-50 to-blue-50 rounded-2xl p-8 md:p-10 h-full">
+
+                    <h2 class="text-3xl font-bold text-gray-800">Onze contactgegevens</h2>
+
+                    <p class="mt-2 text-gray-600">
+
+                        Je kunt ons ook bereiken via deze kanalen:
+
+                    </p>
+
+                    
+
+                    <div class="mt-8 space-y-6">
+
+                        <div class="flex items-start space-x-4">
+
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 text-primary p-3 rounded-lg">
+
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-semibold text-gray-800">Adres</h3>
+
+                                <p class="mt-1 text-gray-600">
+
+                                    Prinsdaal 63<br>
+
+                                    9420 Erpe-Mere
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                        <div class="flex items-start space-x-4">
+
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 text-primary p-3 rounded-lg">
+
+                                <i class="fas fa-envelope text-xl"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-semibold text-gray-800">E-mail</h3>
+
+                                <p class="mt-1 text-gray-600">
+
+                                    <a href="mailto:info@jitware.be" class="hover:text-primary transition">info@jitware.be</a>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                        <div class="flex items-start space-x-4">
+
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 text-primary p-3 rounded-lg">
+
+                                <i class="fas fa-phone-alt text-xl"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-semibold text-gray-800">Telefoon</h3>
+
+                                <p class="mt-1 text-gray-600">
+
+                                    <a href="tel:+32031234567" class="hover:text-primary transition">04 72 85 49 46</a>
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                        
+
+                        <div class="flex items-start space-x-4">
+
+                            <div class="flex-shrink-0 bg-primary bg-opacity-10 text-primary p-3 rounded-lg">
+
+                                <i class="fas fa-clock text-xl"></i>
+
+                            </div>
+
+                            <div>
+
+                                <h3 class="font-semibold text-gray-800">Openingsuren</h3>
+
+                                <p class="mt-1 text-gray-600">
+
+                                    Maandag - Zaterdag<br>
+
+                                    07:00 - 22:00
+
+                                </p>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                    
+
+                    <div class="mt-12">
+
+                        <h3 class="font-semibold text-gray-800">Volg ons op sociale media</h3>
+
+                        <div class="flex space-x-4 mt-4">
+
+                            <a href="https://www.linkedin.com/in/jensvandeneeckhout/" class="bg-white p-3 rounded-lg text-primary hover:bg-primary hover:text-white transition">
+
+                                <i class="fab fa-linkedin-in"></i>
+
+                            </a>
+
+
+
+                            <a href="https://www.facebook.com/jitware.agency/" class="bg-white p-3 rounded-lg text-primary hover:bg-primary hover:text-white transition">
+
+                                <i class="fab fa-facebook-f"></i>
+
+                            </a>
+
+                            <a href="https://www.instagram.com/jitware/" class="bg-white p-3 rounded-lg text-primary hover:bg-primary hover:text-white transition">
+
+                                <i class="fab fa-instagram"></i>
+
+                            </a>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </main>
+
+    
+
+    <!-- Map Section -->
+
+    <section class="bg-gray-50 py-16">
+
+        <div class="container mx-auto px-6">
+
+            <div class="text-center mb-12">
+
+                <h2 class="text-3xl font-bold text-gray-800">Onze locatie</h2>
+
+                <p class="mt-2 text-gray-600 max-w-2xl mx-auto">
+
+                    Bezoek ons op kantoor voor een kop koffie en een goed gesprek over jouw project.
+
+                </p>
+
+            </div>
+
+            
+
+            <div class="rounded-2xl overflow-hidden shadow-xl">
+
+
+
+   <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3026.0783412474298!2d3.9296382126400937!3d50.92034887156769!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47c3a223565a9aff%3A0xedc630a5ae859d32!2sPrinsdaal%2063%2C%209420%20Erpe-Mere!5e1!3m2!1snl!2sbe!4v1745715623663!5m2!1snl!2sbe" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" class="block"></iframe>
+
+            </div>
+
+        </div>
+
+    </section>
+
+    
+
+    <!-- Footer -->
+<!--
+    <footer class="bg-dark text-white py-12">
+
+        <div class="container mx-auto px-6">
+
+            <div class="flex flex-col md:flex-row justify-between">
+
+                <div class="mb-8 md:mb-0">
+
+                    <div class="flex items-center space-x-2 mb-4">
+
+                        <div class="w-10 h-10 rounded-full bg-white flex items-center justify-center">
+
+                            <i class="fas fa-robot text-primary text-xl"></i>
+
+                        </div>
+
+                        <span class="text-xl font-bold">Jitware</span>
+
+                    </div>
+
+                    <p class="text-gray-400 max-w-xs">
+
+                        Jouw partner in webdevelopment, zoekmachineoptimalisatie en AI-oplossingen.
+
+                    </p>
+
+                </div>
+
+                
+
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-8">
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg mb-4">Diensten</h3>
+
+                        <ul class="space-y-2 text-gray-400">
+
+                            <li><a href="#" class="hover:text-white transition">Webdevelopment</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">SEO</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">AI-oplossingen</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">Digitale strategie</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg mb-4">Bedrijf</h3>
+
+                        <ul class="space-y-2 text-gray-400">
+
+                            <li><a href="#" class="hover:text-white transition">Over ons</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">Team</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">Cases</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">Blog</a></li>
+
+                        </ul>
+
+                    </div>
+
+                    
+
+                    <div>
+
+                        <h3 class="font-semibold text-lg mb-4">Juridisch</h3>
+
+                        <ul class="space-y-2 text-gray-400">
+
+                            <li><a href="#" class="hover:text-white transition">Privacybeleid</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">Cookiebeleid</a></li>
+
+                            <li><a href="#" class="hover:text-white transition">Algemene voorwaarden</a></li>
+
+                        </ul>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+            
+
+            <div class="border-t border-gray-800 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center">
+
+                <p class="text-gray-500 text-sm mb-4 md:mb-0">
+
+                    &copy; 2023 Jitware. Alle rechten voorbehouden.
+
+                </p>
+
+                <div class="flex space-x-6">
+
+                    <a href="#" class="text-gray-500 hover:text-white transition">
+
+                        <i class="fab fa-linkedin-in"></i>
+
+                    </a>
+
+                    <a href="#" class="text-gray-500 hover:text-white transition">
+
+                        <i class="fab fa-twitter"></i>
+
+                    </a>
+
+                    <a href="#" class="text-gray-500 hover:text-white transition">
+
+                        <i class="fab fa-facebook-f"></i>
+
+                    </a>
+
+                    <a href="#" class="text-gray-500 hover:text-white transition">
+
+                        <i class="fab fa-instagram"></i>
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </footer>
+-->
+</body>
+
+
+<!-- Mirrored from www.jitware.be/contact by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:38 GMT -->
+</html>

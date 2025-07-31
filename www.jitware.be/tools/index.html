@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<!-- Mirrored from www.jitware.be/tools/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:34 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gratis tools overzicht</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .tag-chip {
+            transition: all 0.2s ease;
+        }
+        .tag-chip:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+        }
+        .tool-card {
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .tool-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+        }
+    </style>
+<link rel="icon" href="includes/favicon.html" type="image/png">
+<!-- GA script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7M5J12J0X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E7M5J12J0X');
+</script>
+
+<!-- Mouseflow -->
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "../../cdn.mouseflow.com/projects/75bea4c3-cd8d-4001-953f-3b3c39462f1f.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <div class="container mx-auto px-4 py-8">
+        <!-- Header -->
+        <header class="mb-12 text-center">
+            <h1 class="text-4xl font-bold text-gray-800 mb-2">Gratis tools overzicht</h1>
+            <p class="text-gray-600 max-w-2xl mx-auto">Ontdek onze handige tools om je werk efficiënter te maken</p>
+        </header>
+
+        <!-- Filter Section -->
+        <div class="bg-white rounded-xl shadow-md p-6 mb-8 md:sticky md:top-4 z-50">
+            <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+                <div>
+                    <h2 class="text-lg font-semibold text-gray-700 mb-2">Filter op categorie</h2>
+                    <div class="flex flex-wrap gap-2" id="tag-filters">
+                        <!-- Tags will be inserted here by JavaScript -->
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <label for="sort" class="mr-2 text-gray-700">Sorteer op:</label>
+                    <select id="sort" class="border border-gray-300 rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-blue-500">
+                        <option value="newest">Nieuwste eerst</option>
+                        <option value="oldest">Oudste eerst</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+
+        <!-- Tools Container -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="tools-container">
+            <!-- Tools will be inserted here by JavaScript -->
+        </div>
+
+        <!-- Empty State -->
+        <div id="empty-state" class="hidden text-center py-12">
+            <i class="fas fa-tools text-5xl text-gray-300 mb-4"></i>
+            <h3 class="text-xl font-medium text-gray-500">Geen tools gevonden</h3>
+            <p class="text-gray-400 mt-2">Probeer een andere filtercombinatie</p>
+            <button id="reset-filters" class="mt-4 px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 transition-colors">
+                Reset alle filters
+            </button>
+        </div>
+    </div>
+
+    <script>
+        // Fetch tools data
+        let toolsData = [];
+
+        fetch('tools.json')
+            .then(response => response.json())
+            .then(data => {
+                toolsData = data;
+                init(); // start rendering nadat data geladen is
+            });
+
+        // State management
+        let state = {
+            activeTags: [],
+            sortBy: 'newest'
+        };
+
+        // DOM elements
+        const tagFiltersContainer = document.getElementById('tag-filters');
+        const toolsContainer = document.getElementById('tools-container');
+        const emptyState = document.getElementById('empty-state');
+        const sortSelect = document.getElementById('sort');
+        const resetFiltersBtn = document.getElementById('reset-filters');
+
+        // Initialize the page
+        function init() {
+            renderTagFilters();
+            renderTools();
+            setupEventListeners();
+        }
+
+        // Set up event listeners
+        function setupEventListeners() {
+            sortSelect.addEventListener('change', (e) => {
+                state.sortBy = e.target.value;
+                renderTools();
+            });
+
+            resetFiltersBtn.addEventListener('click', () => {
+                state.activeTags = [];
+                state.sortBy = 'newest';
+                sortSelect.value = 'newest';
+                renderTagFilters();
+                renderTools();
+            });
+        }
+
+        // Extract all unique tags from tools data
+        function getAllTags() {
+            const allTags = new Set();
+            toolsData.forEach(tool => {
+                if (tool.tags) {
+                    tool.tags.forEach(tag => allTags.add(tag));
+                }
+            });
+            return Array.from(allTags).sort();
+        }
+
+        // Render tag filter chips
+        function renderTagFilters() {
+            const tags = getAllTags();
+            tagFiltersContainer.innerHTML = '';
+
+            tags.forEach(tag => {
+                const isActive = state.activeTags.includes(tag);
+                const chip = document.createElement('button');
+                chip.className = `tag-chip px-3 py-1 rounded-full text-sm font-medium ${isActive ? 'bg-blue-500 text-white' : 'bg-gray-100 text-gray-700 hover:bg-gray-200'}`;
+                chip.textContent = tag;
+                chip.dataset.tag = tag;
+                chip.addEventListener('click', () => toggleTag(tag));
+                tagFiltersContainer.appendChild(chip);
+            });
+        }
+
+        // Toggle tag in active tags
+        function toggleTag(tag) {
+            if (state.activeTags.includes(tag)) {
+                state.activeTags = state.activeTags.filter(t => t !== tag);
+            } else {
+                state.activeTags.push(tag);
+            }
+            renderTagFilters();
+            renderTools();
+        }
+
+        // Filter and sort tools based on state
+        function getFilteredTools() {
+            let tools = [...toolsData];
+
+            // Filter by tags
+            if (state.activeTags.length > 0) {
+                tools = tools.filter(tool => 
+                    tool.tags && tool.tags.some(tag => state.activeTags.includes(tag))
+                );
+            }
+
+            // Sort tools
+            tools.sort((a, b) => {
+                const dateA = new Date(a.datum);
+                const dateB = new Date(b.datum);
+                return state.sortBy === 'newest' ? dateB - dateA : dateA - dateB;
+            });
+
+            return tools;
+        }
+
+        // Format date to readable format
+        function formatDate(dateString) {
+            const options = { year: 'numeric', month: 'long', day: 'numeric' };
+            return new Date(dateString).toLocaleDateString('nl-NL', options);
+        }
+
+        // Render tools
+        function renderTools() {
+            const tools = getFilteredTools();
+            toolsContainer.innerHTML = '';
+
+            if (tools.length === 0) {
+                emptyState.classList.remove('hidden');
+                toolsContainer.classList.add('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            toolsContainer.classList.remove('hidden');
+
+            tools.forEach((tool, index) => {
+                const toolElement = document.createElement('article');
+                toolElement.className = `tool-card bg-white rounded-xl shadow-md overflow-hidden fade-in`;
+                toolElement.style.animationDelay = `${index * 0.1}s`;
+
+                let imageHtml = '';
+                if (tool.foto) {
+                    imageHtml = `
+                        <div class="h-48 overflow-hidden">
+                            <img src="${tool.foto}" alt="${tool.titel}" class="w-full h-full object-cover">
+                        </div>
+                    `;
+                }
+
+                let tagsHtml = '';
+                if (tool.tags && tool.tags.length > 0) {
+                    tagsHtml = `
+                        <div class="flex flex-wrap gap-2 mt-3">
+                            ${tool.tags.map(tag => `
+                                <span class="text-xs px-2 py-1 bg-gray-100 rounded-full text-gray-600">${tag}</span>
+                            `).join('')}
+                        </div>
+                    `;
+                }
+
+                toolElement.innerHTML = `
+                    <a href="${tool.url}">
+                        ${imageHtml}
+                        <div class="p-6">
+                            <div class="flex justify-between items-start mb-2">
+                                <h2 class="text-xl font-bold text-gray-800 hover:text-blue-600 transition-colors">${tool.titel}</h2>
+                                <span class="text-sm text-gray-500 whitespace-nowrap ml-2">${formatDate(tool.datum)}</span>
+                            </div>
+                            ${tool.beschrijving ? `<p class="text-gray-600 mt-2">${tool.beschrijving}</p>` : ''}
+                            ${tagsHtml}
+                            <div class="mt-4">
+                                <span class="text-blue-500 font-medium hover:text-blue-700 transition-colors inline-flex items-center">
+                                    Gebruik tool <i class="fas fa-arrow-right ml-1 text-sm"></i>
+                                </span>
+                            </div>
+                        </div>
+                    </a>
+                `;
+
+                toolsContainer.appendChild(toolElement);
+            });
+        }
+
+        // Initialize the page when loaded
+        document.addEventListener('DOMContentLoaded', init);
+    </script>
+</body>
+
+<!-- Mirrored from www.jitware.be/tools/ by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:34 GMT -->
+</html>

@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Mirrored from www.jitware.be/ai/prompts/prompt-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:37 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=UTF-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prompt Library</title>
+    <script src="https://cdn.tailwindcss.com/"></script>
+    <link rel="stylesheet" href="../../../cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .prompt-content {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .prompt-content.expanded {
+            max-height: 1000px;
+            transition: max-height 0.5s ease-in;
+        }
+        .tag-badge {
+            transition: all 0.2s ease;
+        }
+        .tag-badge:hover {
+            transform: translateY(-2px);
+        }
+        .card-hover {
+            transition: all 0.3s ease;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+<link rel="icon" href="includes/favicon.html" type="image/png">
+<!-- GA script -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-E7M5J12J0X"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-E7M5J12J0X');
+</script>
+
+<!-- Mouseflow -->
+<script type="text/javascript">
+  window._mfq = window._mfq || [];
+  (function() {
+    var mf = document.createElement("script");
+    mf.type = "text/javascript"; mf.defer = true;
+    mf.src = "../../../cdn.mouseflow.com/projects/75bea4c3-cd8d-4001-953f-3b3c39462f1f.js";
+    document.getElementsByTagName("head")[0].appendChild(mf);
+  })();
+</script>
+
+</head>
+<body class="bg-gray-50 min-h-screen">
+    <header class="bg-white shadow-sm">
+        <div class="container mx-auto px-4 py-8 md:py-12">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-6">
+                <div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-2">Prompt Library</h1>
+                    <p class="text-lg text-gray-600">A curated collection of AI prompts to boost your productivity</p>
+                </div>
+                <button class="bg-blue-600 hover:bg-blue-700 text-white px-6 py-3 rounded-xl font-medium transition-colors shadow-md">
+                    <i class="fas fa-plus mr-2"></i> Add New Prompt
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 py-8">
+        <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-8 gap-4">
+            <div class="w-full md:w-auto">
+                <div class="relative">
+                    <input type="text" id="searchInput" placeholder="Search prompts..." 
+                        class="w-full md:w-64 px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <i class="fas fa-search absolute right-3 top-3 text-gray-400"></i>
+                </div>
+            </div>
+            <div class="flex gap-3 w-full md:w-auto">
+                <select id="sortSelect" class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">Sort by...</option>
+                    <option value="title">Alphabetically</option>
+                    <option value="category">Category</option>
+                </select>
+                <select id="filterSelect" class="px-4 py-2 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-blue-500">
+                    <option value="">All Categories</option>
+                    <option value="Writing">Writing</option>
+                    <option value="SEO">SEO</option>
+                    <option value="Code">Code</option>
+                    <option value="Automation">Automation</option>
+                    <option value="Marketing">Marketing</option>
+                    <option value="AI Tools">AI Tools</option>
+                    <option value="Web Dev">Web Dev</option>
+                    <option value="Notion">Notion</option>
+                </select>
+            </div>
+        </div>
+
+        <div id="promptsContainer" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Prompts will be inserted here by JavaScript -->
+        </div>
+    </main>
+
+    <script>
+        // Sample prompt data
+        const prompts = [
+            {
+                id: 1,
+                title: "Blog Post Outline",
+                description: "Create a structured outline for a blog post on a given topic.",
+                category: "Writing",
+                tags: ["blogging", "content", "structure"],
+                content: "Create a detailed outline for a blog post about [TOPIC]. Include an engaging introduction, 3-5 main sections with subtopics, and a compelling conclusion. Each section should have bullet points of key ideas to cover. Make sure the structure flows logically and maintains reader interest throughout."
+            },
+            {
+                id: 2,
+                title: "SEO Meta Description",
+                description: "Generate an optimized meta description for search engines.",
+                category: "SEO",
+                tags: ["metadata", "search", "optimization"],
+                content: "Write a compelling SEO meta description for a page about [TOPIC]. Keep it under 160 characters. Include the primary keyword naturally, convey the page's value proposition, and create curiosity to encourage clicks. Make it concise yet descriptive."
+            },
+            {
+                id: 3,
+                title: "Python Data Cleaning",
+                description: "Create a Python script to clean and preprocess a dataset.",
+                category: "Code",
+                tags: ["python", "data", "cleaning"],
+                content: "Write a Python script using pandas to clean a dataset stored in a CSV file. The script should: 1) Handle missing values appropriately, 2) Remove duplicate entries, 3) Convert data types as needed, 4) Normalize text data, 5) Handle outliers, and 6) Save the cleaned data to a new CSV file. Include comments explaining each step."
+            },
+            {
+                id: 4,
+                title: "Automate Social Posts",
+                description: "Generate a script to automate social media posting.",
+                category: "Automation",
+                tags: ["social", "automation", "schedule"],
+                content: "Create a script that automates posting to social media platforms. The script should: 1) Read post content from a CSV file with columns for date, time, platform, and content, 2) Schedule posts according to the specified times, 3) Handle different post formats (text, image, video) appropriately, 4) Include error handling for failed posts, and 5) Log all posting activity. Provide instructions for setting up the necessary API credentials."
+            },
+            {
+                id: 5,
+                title: "Email Campaign Copy",
+                description: "Write persuasive copy for an email marketing campaign.",
+                category: "Marketing",
+                tags: ["email", "copywriting", "conversion"],
+                content: "Write a series of 3 emails for a [PRODUCT/SERVICE] campaign. Email 1: Introduce the product with a compelling story. Email 2: Highlight benefits and social proof. Email 3: Create urgency with a limited-time offer. Each email should have an attention-grabbing subject line, personalized greeting, engaging body copy, clear CTA, and professional signature. Keep the tone [FORMAL/CASUAL] and tailored to [TARGET AUDIENCE]."
+            },
+            {
+                id: 6,
+                title: "AI Image Generation",
+                description: "Prompt for generating high-quality AI images.",
+                category: "AI Tools",
+                tags: ["images", "generation", "DALL-E"],
+                content: "Generate a high-quality [STYLE] image of [SUBJECT]. The image should have [CHARACTERISTICS, e.g., vibrant colors, dramatic lighting]. Include details about composition, perspective, and mood. Use [RESOLUTION] resolution and maintain a consistent [ARTISTIC STYLE] throughout. Avoid [UNWANTED ELEMENTS]."
+            },
+            {
+                id: 7,
+                title: "React Component",
+                description: "Create a reusable React component with best practices.",
+                category: "Web Dev",
+                tags: ["react", "component", "frontend"],
+                content: "Create a reusable React component for [PURPOSE]. The component should: 1) Use functional components with hooks, 2) Implement PropTypes for type checking, 3) Include proper error boundaries, 4) Be fully responsive, 5) Follow accessibility best practices, 6) Have clean, modular code with appropriate comments, and 7) Include Storybook documentation. Provide examples of usage with different props."
+            },
+            {
+                id: 8,
+                title: "Notion Database",
+                description: "Set up an advanced Notion database for task management.",
+                category: "Notion",
+                tags: ["organization", "productivity", "database"],
+                content: "Create a comprehensive Notion database for task management with the following features: 1) Multiple views (table, board, calendar), 2) Custom status fields with color coding, 3) Priority levels, 4) Due dates with reminders, 5) Relation to projects database, 6) Progress tracking, 7) Time estimates vs actual time, and 8) Filtering and sorting options. Include instructions for setting up linked databases and templates."
+            },
+            {
+                id: 9,
+                title: "Cold Outreach Email",
+                description: "Write a personalized cold email for sales outreach.",
+                category: "Marketing",
+                tags: ["sales", "outreach", "conversion"],
+                content: "Write a personalized cold email to [TARGET PERSONA] at [COMPANY]. The email should: 1) Start with a specific compliment or observation about their work, 2) Clearly state the value you can provide, 3) Include social proof or relevant case studies, 4) Have a clear, low-pressure CTA, and 5) Be concise (under 150 words). Maintain a [FRIENDLY/PROFESSIONAL] tone and avoid generic language."
+            }
+        ];
+
+        // DOM elements
+        const promptsContainer = document.getElementById('promptsContainer');
+        const searchInput = document.getElementById('searchInput');
+        const sortSelect = document.getElementById('sortSelect');
+        const filterSelect = document.getElementById('filterSelect');
+
+        // Display all prompts initially
+        displayPrompts(prompts);
+
+        // Search functionality
+        searchInput.addEventListener('input', () => {
+            const searchTerm = searchInput.value.toLowerCase();
+            const filteredPrompts = prompts.filter(prompt => 
+                prompt.title.toLowerCase().includes(searchTerm) ||
+                prompt.description.toLowerCase().includes(searchTerm) ||
+                prompt.content.toLowerCase().includes(searchTerm) ||
+                prompt.tags.some(tag => tag.toLowerCase().includes(searchTerm))
+            );
+            displayPrompts(filteredPrompts);
+        });
+
+        // Sort functionality
+        sortSelect.addEventListener('change', () => {
+            const sortValue = sortSelect.value;
+            let sortedPrompts = [...prompts];
+            
+            if (sortValue === 'title') {
+                sortedPrompts.sort((a, b) => a.title.localeCompare(b.title));
+            } else if (sortValue === 'category') {
+                sortedPrompts.sort((a, b) => a.category.localeCompare(b.category));
+            }
+            
+            displayPrompts(sortedPrompts);
+        });
+
+        // Filter functionality
+        filterSelect.addEventListener('change', () => {
+            const filterValue = filterSelect.value;
+            if (!filterValue) {
+                displayPrompts(prompts);
+            } else {
+                const filteredPrompts = prompts.filter(prompt => prompt.category === filterValue);
+                displayPrompts(filteredPrompts);
+            }
+        });
+
+        // Function to display prompts
+        function displayPrompts(promptsToDisplay) {
+            promptsContainer.innerHTML = '';
+            
+            if (promptsToDisplay.length === 0) {
+                promptsContainer.innerHTML = `
+                    <div class="col-span-full text-center py-12">
+                        <i class="fas fa-search text-4xl text-gray-400 mb-4"></i>
+                        <h3 class="text-xl font-medium text-gray-600">No prompts found</h3>
+                        <p class="text-gray-500">Try adjusting your search or filter criteria</p>
+                    </div>
+                `;
+                return;
+            }
+            
+            promptsToDisplay.forEach(prompt => {
+                const promptCard = document.createElement('div');
+                promptCard.className = 'bg-white rounded-xl shadow-md overflow-hidden card-hover';
+                promptCard.innerHTML = `
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-2">
+                            <h3 class="text-xl font-bold text-gray-800">${prompt.title}</h3>
+                            <span class="inline-block bg-blue-100 text-blue-800 text-xs px-2 py-1 rounded-full">
+                                ${prompt.category}
+                            </span>
+                        </div>
+                        <p class="text-gray-600 mb-4">${prompt.description}</p>
+                        
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            ${prompt.tags.map(tag => `
+                                <span class="tag-badge bg-gray-100 text-gray-800 text-xs px-2 py-1 rounded-full">${tag}</span>
+                            `).join('')}
+                        </div>
+                        
+                        <div class="flex justify-between items-center">
+                            <button onclick="copyPrompt('${escapePromptContent(prompt.content)}')" 
+                                class="bg-gray-100 hover:bg-gray-200 text-gray-800 px-4 py-2 rounded-lg text-sm font-medium transition-colors">
+                                <i class="far fa-copy mr-2"></i> Copy Prompt
+                            </button>
+                            <button onclick="togglePromptContent(this)" 
+                                class="text-blue-600 hover:text-blue-800 font-medium text-sm flex items-center transition-colors">
+                                Show Full Prompt <i class="fas fa-chevron-down ml-2 text-xs"></i>
+                            </button>
+                        </div>
+                        
+                        <div class="prompt-content mt-4 bg-gray-50 rounded-lg">
+                            <div class="p-4 text-gray-700 whitespace-pre-wrap">${prompt.content}</div>
+                        </div>
+                    </div>
+                `;
+                promptsContainer.appendChild(promptCard);
+            });
+        }
+
+        // Helper function to escape prompt content for HTML
+        function escapePromptContent(content) {
+            return content
+                .replace(/"/g, '&quot;')
+                .replace(/'/g, '&#39;')
+                .replace(/</g, '&lt;')
+                .replace(/>/g, '&gt;');
+        }
+
+        // Copy prompt to clipboard
+        function copyPrompt(content) {
+            navigator.clipboard.writeText(content).then(() => {
+                // Show copied notification
+                const notification = document.createElement('div');
+                notification.className = 'fixed bottom-4 right-4 bg-green-500 text-white px-4 py-2 rounded-lg shadow-lg flex items-center';
+                notification.innerHTML = `
+                    <i class="fas fa-check-circle mr-2"></i> Prompt copied to clipboard!
+                `;
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('opacity-0', 'transition-opacity', 'duration-300');
+                    setTimeout(() => notification.remove(), 300);
+                }, 2000);
+            }).catch(err => {
+                console.error('Failed to copy prompt: ', err); 
+            });
+        }
+        //
+        // Toggle prompt content visibility
+        function togglePromptContent(button) {
+            const card = button.closest('.bg-white');
+            const content = card.querySelector('.prompt-content');
+            const icon = button.querySelector('i');
+            
+            content.classList.toggle('expanded');
+            
+            if (content.classList.contains('expanded')) {
+                button.innerHTML = 'Hide Full Prompt <i class="fas fa-chevron-up ml-2 text-xs"></i>';
+            } else {
+                button.innerHTML = 'Show Full Prompt <i class="fas fa-chevron-down ml-2 text-xs"></i>';
+            }
+        }
+    </script>
+</body>
+
+<!-- Mirrored from www.jitware.be/ai/prompts/prompt-library by HTTrack Website Copier/3.x [XR&CO'2014], Wed, 30 Jul 2025 16:00:37 GMT -->
+</html>
